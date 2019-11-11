@@ -1,0 +1,62 @@
+/*
+*  Set $use-silent-classes true to generate silent classes of the normal css classes
+*  Set $use-silent-classes false if you don't want to generate silent classes of the normal css classes
+*/
+$use-silent-classes:               true;
+//Type class
+$silent-class:                     "%";
+$css-class:                        ".";
+
+$primary-color: #003857;
+$secondary-color: #00A1AD;
+$primary-color-hover: #440063;
+$secondary-color-hover: #24909a;
+$primary-color-dark: #022030;
+$dark: #010029;
+$white: #FFF;
+$grey: #767676;
+$grey-light: #6B6B6B;
+$grey-super-ligther: #c7c7c7;
+$separator-color: #D8D8D8;
+$grey-font: #5F5F5F;
+$grey-background: #f9f9f9;
+$dark-background: #191919;
+$gradient-background-right-bottom: linear-gradient(to right bottom, #00a1ad, #00859c, #006a87, #005170, #003857);
+$gradient-background: radial-gradient(circle at left bottom, $primary-color 0%, $secondary-color 70%) no-repeat !important;
+$gradient-icon: -webkit-linear-gradient($secondary-color, $primary-color);
+$shadow-card: 0 10px 20px rgb(239, 234, 242), 0 6px 6px rgb(239, 234, 242);
+
+// Media Queries and grid settings
+
+$screen-extra-small:              	480px!default;
+$screen-small:                    	576px!default;
+$screen-medium:                   	768px!default;
+$screen-large:                    	992px!default;
+$screen-extra-large:              	2000px!default;
+
+// Typography
+$font-family-titles-light:          "TechnicalForest-Light", sans-serif;
+$font-family-titles-regular:        "TechnicalForest-Regular", sans-serif;
+$font-family-titles-bold:           "TechnicalForest-Bold", sans-serif;
+$font-family-secondary:             "Quicksand", sans-serif;
+
+$font-size-h1:                      36px;
+$font-size-h2:                      30px;
+$font-size-h3:                      28px;
+$font-size-h4:                      18px;
+$font-size-h5:                      14px;
+$font-size-h6:                      12px;
+
+//directions
+$directions-breakpoints :          ('top', 'bottom', 'left', 'right');
+$directions-y-breakpoints :        ('top', 'bottom');
+$directions-x-breakpoints :        ('left', 'right');
+
+//Margin
+$margin-base:                      40px;
+//Border
+$border-none:                      0px;
+$border-base-radius:               4px;
+
+$icon-font-path: "node_modules/bootstrap-sass/assets/fonts/bootstrap/";
+$material-icons-font-path: 'node_modules/material-icons/iconfont/';

@@ -24,9 +24,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/font/TechnicalForestFont.css",
+              "node_modules/flexboxgrid/dist/flexboxgrid.min.css",
+              "src/styles.css",
+              "src/sass/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/javascript/navbar.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -86,12 +91,16 @@
             "karmaConfig": "karma.conf.js",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets/img"
             ],
             "styles": [
+              "src/font/TechnicalForestFont.css",
+              "node_modules/flexboxgrid/dist/flexboxgrid.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/javascript/navbar.js"
+            ]
           }
         },
         "lint": {
@@ -120,6 +129,12 @@
           }
         }
       }
-    }},
-  "defaultProject": "CDCOMPUTO"
+    }
+  },
+  "defaultProject": "CDCOMPUTO",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }

@@ -1,0 +1,38 @@
+.margin {
+    &--flush {
+      margin: 0;
+    }
+    &-bottom {
+      &--20 {
+        margin-bottom: 20px;
+      }
+      &--200 {
+        margin-bottom: 200px;
+      }
+    }
+    &-top {
+      &--40 {
+        margin-top: 40px;
+      }
+      &--20 {
+        margin-top: 20px;
+      }
+      &--100 {
+        margin-top: 100px;
+      }
+    }
+  }
+  
+  .padding {
+    &--horizontal {
+      &-tiny {
+        padding: 0 15px;
+      }
+    }
+    &--bottom {
+      &-50 {
+        padding-bottom: 50px;
+      }
+    }
+  }
+  
