@@ -18,7 +18,11 @@ export class CdComputoComponent implements OnInit {
     // this.listaArticulos= this.productoService.getProductos();
 
 
-    this.listaArticulos= this.productoService.getProductos();
+    // this.listaArticulos= this.productoService.getProductos();
+    this.productoService.getProductos().subscribe((data: any[])=>{
+      console.log(data);
+      this.listaArticulos = data;
+    })  
       // this.listaArticulos = data;
     
 

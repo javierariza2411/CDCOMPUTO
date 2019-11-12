@@ -14,14 +14,11 @@ export class ProductoService{
       
     }
  
-   public getProductos():Observable<any>{
+   public getProductos(){
         // return this.http.get('https://randomuser.me/api/?results=25');
 
-      this.http.get('http://localhost:8080/rest/servicioPersonas/personas').subscribe(dataApi => {   // data is already a JSON object
-      console.log(dataApi);;
-      this.data=dataApi;})
+    return this.http.get('http://localhost:8080/buscarArticulos');
 
-     return this.data;
 }
 
 
