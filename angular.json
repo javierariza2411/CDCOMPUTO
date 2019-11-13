@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/bootstrap/vendor/bootstrap/css/bootstrap.min.css",
               "src/font/TechnicalForestFont.css",
               "node_modules/flexboxgrid/dist/flexboxgrid.min.css",
               "src/styles.css",
@@ -94,6 +95,7 @@
               "src/assets/img"
             ],
             "styles": [
+              "src/bootstrap/vendor/bootstrap/css/bootstrap.min.css",
               "src/font/TechnicalForestFont.css",
               "node_modules/flexboxgrid/dist/flexboxgrid.min.css",
               "src/styles.css"

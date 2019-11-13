@@ -4,7 +4,6 @@ import {ProductoService} from '../services/serviceRest';
 @Component({
   selector: 'app-cd-computo',
   templateUrl: './cd-computo.component.html',
-  styleUrls: ['../../bootstrap/vendor/bootstrap/css/bootstrap.min.css']
 })
 export class CdComputoComponent implements OnInit {
 
