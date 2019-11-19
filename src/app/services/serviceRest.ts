@@ -17,7 +17,7 @@ export class ProductoService{
    public getProductos(){
         // return this.http.get('https://randomuser.me/api/?results=25');
 
-    return this.http.get('http://localhost:8080/buscarArticulos');
+    return this.http.get('https://cdcomputoservidor.herokuapp.com/buscarArticulos');
 
 }
 
