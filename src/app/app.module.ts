@@ -1,4 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
+import {
+  MatToolbarModule,  
+  MatTabsModule,
+  MatButtonModule,
+  MatIconModule,
+  MatCardModule
+} from '@angular/material';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { NgModule , CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,17 +18,8 @@ import { SideNavComponent } from './cd-computo/cd-computo.side-nav';
 import { FooterComponent } from './cd-computo/cd-computo.footer';
 import {HttpClientModule} from '@angular/common/http';
 import {ProductoService} from './services/serviceRest';
-import { UserRegisterComponent } from './user-register/user-register.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {
-  MatToolbarModule,  
-  MatTabsModule,
-  MatButtonModule,
-  MatIconModule,
-  MatCardModule
-} from '@angular/material';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { UserRegisterComponent } from './user-register/user-register.component';
 
 
 
@@ -34,7 +34,7 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
     HeaderCarouselComponent,
     FooterComponent,
     SideNavComponent,
-    UserRegisterComponent,
+    UserRegisterComponent
   ],
   imports: [
     BrowserModule,
