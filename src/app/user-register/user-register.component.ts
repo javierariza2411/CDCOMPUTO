@@ -1,8 +1,13 @@
-import {Component, OnInit } from '@angular/core';
+import {Component, OnInit,Inject } from '@angular/core';
 import {FormControl} from '@angular/forms';
 import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
+import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
+
+export interface DialogData {
+  animal: 'panda' | 'unicorn' | 'lion';
+}
 
 @Component({
   selector: 'app-user-register',
@@ -12,28 +17,25 @@ import {map, startWith} from 'rxjs/operators';
 export class UserRegisterComponent implements OnInit{
   
 
+constructor(public dialog: MatDialog) {}
 
 
-// INICIO  AUTOCOMPLETAR
+ngOnInit() {
+}
 
-  myControl = new FormControl();
-  options: string[] = ['One', 'Two', 'Three'];
-  filteredOptions: Observable<string[]>;
-
-  ngOnInit() {
-    this.filteredOptions = this.myControl.valueChanges
-      .pipe(
-        startWith(''),
-        map(value => this._filter(value))
-      );
+  openDialog() {
+    this.dialog.open(DialogDataExampleDialog, {
+      data: {
+        animal: 'panda'
+      }
+    });
   }
+}
 
-  private _filter(value: string): string[] {
-    const filterValue = value.toLowerCase();
-
-    return this.options.filter(option => option.toLowerCase().includes(filterValue));
-  }
-
-  // FIN AUTOCOMPLETAR
-
+@Component({
+  selector: 'dialog-data-example-dialog',
+  templateUrl: './dialog-data-example-dialog.html',
+})
+export class DialogDataExampleDialog {
+  constructor(@Inject(MAT_DIALOG_DATA) public data: DialogData) {}
 }

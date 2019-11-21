@@ -20,6 +20,9 @@ import {HttpClientModule} from '@angular/common/http';
 import {ProductoService} from './services/serviceRest';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserRegisterComponent } from './user-register/user-register.component';
+import {DialogDataExampleDialog } from './user-register/user-register.component'
+import {MatDialogModule} from '@angular/material/dialog';
+
 
 
 
@@ -34,8 +37,13 @@ import { UserRegisterComponent } from './user-register/user-register.component';
     HeaderCarouselComponent,
     FooterComponent,
     SideNavComponent,
-    UserRegisterComponent
+    UserRegisterComponent,
+    DialogDataExampleDialog
+
+    
   ],
+  exports: [ DialogDataExampleDialog ],
+  entryComponents: [DialogDataExampleDialog],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -48,7 +56,8 @@ import { UserRegisterComponent } from './user-register/user-register.component';
     MatCardModule,
     FormsModule,
     ReactiveFormsModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    MatDialogModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [ProductoService],
