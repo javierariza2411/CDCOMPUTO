@@ -26,6 +26,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { OpentoggleComponent } from './opentoggle/opentoggle.component';
 import { CarritoComponent} from './carrito/carrito.component';
 import { CarritoService } from './service/carrito.service';
+import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 
 
 
@@ -45,7 +46,8 @@ import { CarritoService } from './service/carrito.service';
     UserRegisterComponent,
     DialogDataExampleDialog,
     OpentoggleComponent,
-    CarritoComponent
+    CarritoComponent,
+    AutocompleteComponent
 
     
   ],
