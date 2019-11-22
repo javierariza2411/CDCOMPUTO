@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule, Routes } from '@angular/router';
 import {
   MatToolbarModule,  
   MatTabsModule,
@@ -12,16 +13,20 @@ import { NgModule , CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CdComputoComponent } from './cd-computo/cd-computo.component';
-import { NavbarComponent } from './cd-computo/cd-computo.navbar';
-import { HeaderCarouselComponent } from './cd-computo/cd-computo.header-carousel';
-import { SideNavComponent } from './cd-computo/cd-computo.side-nav';
-import { FooterComponent } from './cd-computo/cd-computo.footer';
+import { NavbarComponent } from './cd-computo/ui-ux/cd-computo.navbar';
+import { HeaderCarouselComponent } from './cd-computo/ui-ux/cd-computo.header-carousel';
+import { SideNavComponent } from './cd-computo/ui-ux/cd-computo.side-nav';
+import { FooterComponent } from './cd-computo/ui-ux/cd-computo.footer';
 import {HttpClientModule} from '@angular/common/http';
 import {ProductoService} from './services/serviceRest';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserRegisterComponent } from './user-register/user-register.component';
 import {DialogDataExampleDialog } from './user-register/user-register.component'
 import {MatDialogModule} from '@angular/material/dialog';
+import { OpentoggleComponent } from './opentoggle/opentoggle.component';
+import { CarritoComponent} from './carrito/carrito.component';
+import { CarritoService } from './service/carrito.service';
+
 
 
 
@@ -38,7 +43,9 @@ import {MatDialogModule} from '@angular/material/dialog';
     FooterComponent,
     SideNavComponent,
     UserRegisterComponent,
-    DialogDataExampleDialog
+    DialogDataExampleDialog,
+    OpentoggleComponent,
+    CarritoComponent
 
     
   ],
@@ -60,7 +67,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatDialogModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
-  providers: [ProductoService],
+  providers: [ProductoService,CarritoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
