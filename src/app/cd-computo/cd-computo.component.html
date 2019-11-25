@@ -37,6 +37,9 @@
                 <a href="#">{{item.arti_descripcion}}</a>
               </h6>
               <p>{{item.arti_precioventa1 | currency: '$'}}</p>
+              <button  mat-button color="primary"  (click)="addProducto(producto)" > Añadir al carrito </button>
+
+             
               <!-- <small class="text-muted ranking">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -49,6 +52,22 @@
         </div>
       </div>
       <!-- /.row -->
+
+
+
+      <article class="message" *ngFor="let producto of productos">
+        <div class="message-header">
+          <p class="subtitle white">{{producto.titulo}}</p>
+        </div>
+        <div class="message-body">
+          {{producto.descripcion}}
+          <br> Precio: {{producto.precio}} €
+          <div class="message-footer">
+            <button (click)="addProducto(producto)" class="button is-info">Añadir al carrito</button>
+          </div>
+        </div>
+      </article>
+      
 
     </div>
     <!-- /.col-lg-9 -->

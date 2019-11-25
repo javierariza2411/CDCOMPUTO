@@ -1,9 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductoService } from '../services/serviceRest';
+import { Subscription } from 'rxjs/Subscription';
+import { CarritoService } from '../service/carrito.service';
+import { Producto } from './../model/producto';
+import { ProductosService } from '../service/productos.service';
+
 
 @Component({
   selector: 'app-cd-computo',
   templateUrl: './cd-computo.component.html',
+  providers: [ProductosService,CarritoService]
 })
 export class CdComputoComponent implements OnInit {
 
@@ -24,8 +30,11 @@ export class CdComputoComponent implements OnInit {
 
   public listaArticulosTemp: any = null;
   public listaArticulos: any = null;
+  private producto: any;
+  private subscription: Subscription;
+  private productos: Array<any> = [];
 
-  constructor(private productoService: ProductoService) { }
+  constructor(private productoService: ProductoService,private productosService: ProductosService private carritoServices:CarritoService) { }
 
   ngOnInit() {
     var articuloImagen = new Object(),
@@ -65,6 +74,25 @@ export class CdComputoComponent implements OnInit {
           this.listaArticulos.push(articuloImagen);
         }
       }
-    })
+    });
+
+
+
+    // getCatalogo(){
+    //   this.productosService.getProductos()
+    //     .then(data => {
+    //       this.productos = (data as Array<Producto>).filter(x => x.novedad !== true);
+    //     })
+    //     .catch(error => alert(error));
+    // }
+  
+    // /**
+    //  * addProducto
+    //  */
+    // addProducto(producto) {
+    //   this.carritoServices.addCarrito(producto);
+    // }
+
+
   }
 };

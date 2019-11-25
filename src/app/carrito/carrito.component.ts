@@ -13,8 +13,25 @@ export class CarritoComponent implements OnInit {
   private carrito: Array<Producto> = [];
   private subscription: Subscription;
   private total: number;
+  private productos: Array<any> = [];
+  private producto: any;
 
-  constructor(private carritoService: CarritoService) { }
+
+  constructor(private carritoService: CarritoService) { 
+  
+    for (let i = 0; i < 20; i++) { // Creamos un conjunto de 20 productos de prueba
+      const producto = new Producto();
+      producto.codigo = (i + 1);
+      producto.titulo = `Producto ${i}`;
+      producto.descripcion = 'Lorem ipsum dolor sit amet...';
+      producto.precio = i * 10 + 100;
+      producto.fabricante = `Fabricante Tkeno-${i}`;
+      producto.novedad = (i < 6); // Marcamos como novedad los 6 primeros
+      this.productos.push(producto);
+    }
+
+
+  }
 
   ngOnInit() {
     this.carritoService.getCarrito().subscribe(data => {
@@ -24,5 +41,14 @@ export class CarritoComponent implements OnInit {
     },
       error => alert(error));
   }
+
+
+    /**
+   * addProducto
+   */
+  addProducto(producto) {
+    this.carritoService.addCarrito(producto);
+  }
+
 
 }
