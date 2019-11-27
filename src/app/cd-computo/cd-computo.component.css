@@ -1,0 +1,31 @@
+#wacht-leftside-dark a{
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    float: left;
+    top: 40%;
+    margin-top: -25px;
+    cursor: pointer;
+    min-width: 50px;
+    max-width: 150px;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto 0 auto;
+    background: #075E54;
+}
+
+#wacht-leftside-dark a:hover{
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1)
+    }
+
+#wacht-leftside-dark a:before {
+    font-family: "IcoMoon-free" !important;
+    content: '\ea93' !important;
+    margin-left: 5px;
+    margin-right: 5px;
+}

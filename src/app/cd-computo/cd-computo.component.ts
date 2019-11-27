@@ -9,6 +9,7 @@ import { ProductosService } from '../service/productos.service';
 @Component({
   selector: 'app-cd-computo',
   templateUrl: './cd-computo.component.html',
+  styleUrls: ['./cd-computo.component.css'],
   providers: [ProductosService,CarritoService]
 })
 export class CdComputoComponent implements OnInit {
@@ -34,7 +35,7 @@ export class CdComputoComponent implements OnInit {
   private subscription: Subscription;
   private productos: Array<any> = [];
 
-  constructor(private productoService: ProductoService,private productosService: ProductosService private carritoServices:CarritoService) { }
+  constructor(private productoService: ProductoService,private productosService: ProductosService, private carritoServices:CarritoService) { }
 
   ngOnInit() {
     var articuloImagen = new Object(),
