@@ -10,11 +10,11 @@ import { CarritoService } from './../service/carrito.service';
 })
 export class CarritoComponent implements OnInit {
 
-  private carrito: Array<Producto> = [];
+  public carrito: Array<Producto> = [];
   private subscription: Subscription;
-  private total: number;
-  private productos: Array<any> = [];
-  private producto: any;
+  public total: number;
+  public productos: Array<any> = [];
+  public producto: any;
 
 
   constructor(private carritoService: CarritoService) { 
