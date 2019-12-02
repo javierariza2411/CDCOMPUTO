@@ -11,9 +11,9 @@ import { ProductosService } from './../service/productos.service';
   providers: [ProductosService]
 })
 export class CatalogoComponent implements OnInit {
-  private producto: any;
+  public producto: any;
   private subscription: Subscription;
-  private productos: Array<any> = [];
+  public productos: Array<any> = [];
 
   constructor(private carritoService: CarritoService, private productosService: ProductosService) { }
 
