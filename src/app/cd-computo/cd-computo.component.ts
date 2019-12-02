@@ -31,9 +31,9 @@ export class CdComputoComponent implements OnInit {
 
   public listaArticulosTemp: any = null;
   public listaArticulos: any = null;
-  private producto: any;
+  public producto: any;
   private subscription: Subscription;
-  private productos: Array<any> = [];
+  public productos: Array<any> = [];
 
   constructor(private productoService: ProductoService,private productosService: ProductosService, private carritoServices:CarritoService) { }
 
