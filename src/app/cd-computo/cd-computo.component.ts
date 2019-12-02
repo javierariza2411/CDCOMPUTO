@@ -37,6 +37,19 @@ export class CdComputoComponent implements OnInit {
 
   constructor(private productoService: ProductoService,private productosService: ProductosService, private carritoServices:CarritoService) { }
 
+  addProducto(producto) {
+    this.carritoServices.addCarrito(producto);
+  }
+
+  getCatalogo(){
+    this.productosService.getProductos()
+      .then(data => {
+        this.productos = (data as Array<Producto>).filter(x => x.novedad !== true);
+      })
+      .catch(error => alert(error));
+  }
+
+
   ngOnInit() {
     var articuloImagen = new Object(),
       arti_precioventa4 = "",
@@ -79,21 +92,14 @@ export class CdComputoComponent implements OnInit {
 
 
 
-    // getCatalogo(){
-    //   this.productosService.getProductos()
-    //     .then(data => {
-    //       this.productos = (data as Array<Producto>).filter(x => x.novedad !== true);
-    //     })
-    //     .catch(error => alert(error));
-    // }
+   
   
     // /**
     //  * addProducto
     //  */
-    // addProducto(producto) {
-    //   this.carritoServices.addCarrito(producto);
-    // }
+   
 
 
   }
 };
+
