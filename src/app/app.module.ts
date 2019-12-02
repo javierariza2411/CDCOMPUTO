@@ -27,6 +27,7 @@ import { OpentoggleComponent } from './opentoggle/opentoggle.component';
 import { CarritoComponent} from './carrito/carrito.component';
 import { CarritoService } from './service/carrito.service';
 import { AutocompleteComponent } from './autocomplete/autocomplete.component';
+import { CatalogoComponent} from './catalogo/catalogo.component';
 
 
 
@@ -47,7 +48,8 @@ import { AutocompleteComponent } from './autocomplete/autocomplete.component';
     DialogDataExampleDialog,
     OpentoggleComponent,
     CarritoComponent,
-    AutocompleteComponent
+    AutocompleteComponent,
+    CatalogoComponent
 
     
   ],
