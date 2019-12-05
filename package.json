@@ -29,6 +29,7 @@
     "hammerjs": "^2.0.8",
     "icomoon-free-npm": "0.0.0",
     "jquery": "^3.4.1",
+    "postcss-import": "^12.0.1",
     "react": "latest",
     "react-dom": "latest",
     "rxjs": "~6.4.0",
