@@ -8,6 +8,8 @@ export class ProductosService {
   private productos: Array<Producto> = [];
 
   constructor() {
+
+    console.log("ENTRO A CONSTRUCTOR")
     for (let i = 0; i < 20; i++) { // Creamos un conjunto de 20 productos de prueba
       const producto = new Producto();
       producto.codigo = (i + 1);
@@ -20,12 +22,14 @@ export class ProductosService {
     }
   }
 
-  /**
+  /** 
    * getProductos
    */
   getProductos() {
+    console.log("ENTRO A GETPRODUCTOS");
     return new Promise((resolve, reject) => {
       if (this.productos.length > 0) {
+        console.log(this.productos);
         resolve(this.productos);
       } else {
         reject('No hay productos disponibles');

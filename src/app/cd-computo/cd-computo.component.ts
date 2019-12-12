@@ -34,23 +34,60 @@ export class CdComputoComponent implements OnInit {
   public producto: any;
   private subscription: Subscription;
   public productos: Array<any> = [];
+    public total: number;
 
-  constructor(private productoService: ProductoService,private productosService: ProductosService, private carritoServices:CarritoService) { }
+
+  constructor(private productoService: ProductoService,private productosService: ProductosService, private carritoServices:CarritoService) { 
+
+    console.log("ENTRO A CONSTRUCTOR")
+    for (let i = 0; i < 20; i++) { // Creamos un conjunto de 20 productos de prueba
+      const producto = new Producto();
+      producto.codigo = (i + 1);
+      producto.titulo = `Producto ${i}`;
+      producto.descripcion = 'Lorem ipsum dolor sit amet...';
+      producto.precio = i * 10 + 100;
+      producto.fabricante = `Fabricante Tkeno-${i}`;
+      producto.novedad = (i < 6); // Marcamos como novedad los 6 primeros
+      this.productos.push(producto);
+    
+  }
+
+
+  }
 
   addProducto(producto) {
+
+    console.log(producto);
     this.carritoServices.addCarrito(producto);
   }
 
   getCatalogo(){
+
+
+    console.log("CATALOGO");
+
     this.productosService.getProductos()
       .then(data => {
         this.productos = (data as Array<Producto>).filter(x => x.novedad !== true);
       })
       .catch(error => alert(error));
+
+
+      console.log(this.productos);
   }
 
 
   ngOnInit() {
+
+    // this.getCatalogo();
+
+    this.carritoServices.getCarrito().subscribe(data => {
+      this.total = this.carritoServices.getTotal();
+
+      console.log("el total es"+this.total)
+    },
+      error => alert(error));
+
     var articuloImagen = new Object(),
       arti_precioventa4 = "",
       arti_descripcion = "",
@@ -88,6 +125,10 @@ export class CdComputoComponent implements OnInit {
           this.listaArticulos.push(articuloImagen);
         }
       }
+
+
+     
+
     });
 
 

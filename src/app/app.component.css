@@ -1,0 +1,9 @@
+.search{
+
+    padding: .5em;
+    background: transparent;
+    border-bottom: none;
+    color: #fff;
+    position: relative;
+    z-index: 999;
+}

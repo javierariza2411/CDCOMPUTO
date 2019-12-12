@@ -5,6 +5,11 @@
       <div class="navbar__brand">
         <img src="/assets/img/logoblack.png" />
       </div>
+      <div id="search-bar" style="padding: .5em;" class="search"><form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" style="    width: 400px;" type="search" placeholder="¿Qué buscas?" aria-label="Search">
+        
+      </form></div>
+
       <div class="navbar__menu">
         <div class="navbar__menu-toggle#menu-toggle">
           <div class="navbar__menu-icon">
@@ -25,7 +30,7 @@
           </li>
           <li class="navbar__list-item" style="background: #00A1AD;border-radius: 9px;">
             <!-- <div class="nav-right"> -->
-              <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp; $
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp; {{total}}$
             <!-- </div> -->
           </li>
         </ul>
