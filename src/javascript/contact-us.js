@@ -1,10 +1,8 @@
-// AOS LIBRARY
-AOS.init();
-
 // contact us map
 $( () => {
-  console.log('JOLAAA');
+  AOS.init();
   AOS.refresh();
+  $('.contact-us__map').css('display', 'none');
   $('.map--pointer').on('click', () => {
     $('.contact-us__map').removeClass('animated fadeOutDown');
     $('.contact-us__map').addClass('animated fadeInUp');
