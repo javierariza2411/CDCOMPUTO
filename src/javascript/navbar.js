@@ -1,5 +1,4 @@
 $( () => {
-    console.log('HOLAAA');
 	//On Scroll Functionality
 	$(window).scroll( () => {
 		var windowTop = $(window).scrollTop();

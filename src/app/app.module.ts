@@ -17,6 +17,8 @@ import { NavbarComponent } from './cd-computo/ui-ux/cd-computo.navbar';
 import { HeaderCarouselComponent } from './cd-computo/ui-ux/cd-computo.header-carousel';
 import { SideNavComponent } from './cd-computo/ui-ux/cd-computo.side-nav';
 import { FooterComponent } from './cd-computo/ui-ux/cd-computo.footer';
+import { SubscriptionListComponent } from './cd-computo/ui-ux/cd-computo.subscription-list';
+import { ContactUsComponent } from './cd-computo/ui-ux/cd-computo.contact-us';
 import {HttpClientModule} from '@angular/common/http';
 import {ProductoService} from './services/serviceRest';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -43,13 +45,15 @@ import { CatalogoComponent} from './catalogo/catalogo.component';
     NavbarComponent,
     HeaderCarouselComponent,
     FooterComponent,
+    SubscriptionListComponent,
     SideNavComponent,
     UserRegisterComponent,
     DialogDataExampleDialog,
     OpentoggleComponent,
     CarritoComponent,
     AutocompleteComponent,
-    CatalogoComponent
+    CatalogoComponent,
+    ContactUsComponent
 
     
   ],

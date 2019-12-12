@@ -32,9 +32,12 @@
               "./src/sass/styles.scss"
             ],
             "scripts": [
-              "./src/javascript/navbar.js",
               "./node_modules/hammerjs/hammer.min.js",
               "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/aos/dist/aos.js",
+              "./src/javascript/contact-us.js",
+              "./src/javascript/subscription.js",
+              "./src/javascript/navbar.js",
               "./src/bootstrap/vendor/bootstrap/js/bootstrap.bundle.js"
             ]
           },
@@ -106,6 +109,7 @@
               "src/styles.css"
             ],
             "scripts": [
+              "src/javascript/contact-us.js",
               "src/javascript/navbar.js"
             ]
           }
