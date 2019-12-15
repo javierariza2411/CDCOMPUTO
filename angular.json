@@ -37,8 +37,8 @@
               "./node_modules/aos/dist/aos.js",
               "./src/javascript/contact-us.js",
               "./src/javascript/subscription.js",
-              "./src/javascript/navbar.js",
-              "./src/bootstrap/vendor/bootstrap/js/bootstrap.bundle.js"
+             "./src/bootstrap/vendor/bootstrap/js/bootstrap.bundle.js",
+              "./src/javascript/navbar.js"
             ]
           },
           "configurations": {

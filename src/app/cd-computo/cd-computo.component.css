@@ -1,18 +1,28 @@
+
+@import url(https://fonts.googleapis.com/css?family=Signika:700,300,600);
 #wacht-leftside-dark a{
     position: fixed;
     z-index: 9999;
-    left: 0;
+    right: 35px;
     float: left;
-    top: 40%;
+    bottom: 23%;
     margin-top: -25px;
     cursor: pointer;
-    min-width: 50px;
-    max-width: 150px;
+    min-width: 60px;
+    width: 60px;
+    height: 60px;
+    max-width: 60px;
     color: #fff;
     text-align: center;
     padding: 10px;
     margin: 0 auto 0 auto;
-    background: #075E54;
+    background: #4ad192;
+    border-radius: 50%;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 }
 
 #wacht-leftside-dark a:hover{
@@ -34,8 +44,6 @@
     margin-left: 5px;
     margin-right: 5px;
 } */
-
-@import url(https://fonts.googleapis.com/css?family=Signika:700,300,600);
 
 html, body { height: 100%; }
 body { display: flex; justify-content: center; align-items: center; margin:20px 0; text-align:center; background:beige; overflow:hidden; }
