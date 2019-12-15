@@ -18,3 +18,15 @@ console.log('whatever');
     $('.subscription__container').removeClass('subscription__container-expand');
   });
 });
+
+$('body').css('max-height','100vh');
+$('body').css('overflow','hidden');
+$(window).on('load', function() {
+  console.log('onLoad')
+  setTimeout(function(){
+    $('.page-spinner').fadeOut();
+    $('.spinner').fadeOut();
+    $('body').css('overflow','auto');
+    $('body').css('max-height','unset');
+  }, 1000);
+});
