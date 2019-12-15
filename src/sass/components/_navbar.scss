@@ -18,6 +18,17 @@ header {
 	z-index: 10;
 	transition: all 0.3s;
 	width: 100vw;
+
+	input {
+		border: none;
+		background: #f8f8f8;
+		font-family: "Quicksand", sans-serif;
+		&::placeholder,
+		&::-webkit-input-placeholder,
+		&:-ms-input-placeholder {
+			font-family: "Quicksand", sans-serif;
+		}
+	}
 	&__container {
 		display: grid;
 		grid-template-columns: 1fr 3fr;
