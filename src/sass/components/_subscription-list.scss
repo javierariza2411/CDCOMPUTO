@@ -55,6 +55,12 @@
       justify-content: center;
       align-items: center;
       color: $white;
+      input {
+        color: white
+      }
+      .btn {
+        padding: 10px 40px;
+      }
       &--text {
         text-align: left;
         font-size: 20px;
