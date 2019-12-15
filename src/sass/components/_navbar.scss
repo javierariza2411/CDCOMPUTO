@@ -7,6 +7,13 @@
 
 }
 
+.carousel-inner {
+	height: calc(100vh - 104px);
+}
+
+.carousel-indicators {
+	z-index: 4;
+}
 /*** Navigation Styles ***/
 header {
 	display: flex;

@@ -1,0 +1,63 @@
+.btn {
+    font-size: 12px;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: $font-family-secondary;
+    transition: .4s all;
+    &-solid--secondary {
+      color: white;
+      padding: 6px 12px;
+      background: $secondary-color;
+      border: none;
+      border-radius: 40px;
+      &:hover {
+        background: $secondary-color-hover;
+        color: $white;
+      }
+    }
+    &-outline--circle-secondary {
+      color: $secondary-color;
+      padding: 6px 6px;
+      background: transparent;
+      border: 2px solid $secondary-color;
+      border-radius: 50px;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      i {
+        margin: 0 !important;
+      }
+      &:hover {
+        background: $secondary-color;
+        color: $white
+      }
+    }
+    &-outline--secondary {
+      color: $secondary-color;
+      padding: 6px 12px;
+      background: transparent;
+      border: 2px solid $secondary-color;
+      border-radius: 40px;
+      &:hover {
+        background: $secondary-color;
+        color: $white
+      }
+    }
+    &-square-outline--secondary {
+      color: $secondary-color;
+      padding: 22px 22px;
+      background: transparent;
+      border: 2px solid $secondary-color;
+      border-radius: 2px;
+      &:hover {
+        background: $secondary-color;
+        color: $white
+      }
+    }
+    i {
+      margin-left: 20px;
+    }
+  }
+  
