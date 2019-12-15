@@ -18,8 +18,15 @@ header {
 	z-index: 10;
 	transition: all 0.3s;
 	width: 100vw;
-
+	.search {
+		position: relative;
+	}
+	.search-bar--input {
+		position: absolute;
+    left: 20px;
+	}
 	input {
+		padding-left: 36px;
 		border: none;
 		background: #f8f8f8;
 		font-family: "Quicksand", sans-serif;
