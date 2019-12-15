@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Signika:700,300,600);
 #wacht-leftside-dark a{
     position: fixed;
-    z-index: 9999;
+    z-index: 4;
     right: 35px;
     float: left;
     bottom: 23%;
