@@ -1,7 +1,6 @@
 
 // subscription
 $( () => {
-console.log('whatever');
   $('.subscription__modal').css('display', 'none');
   $('.subscription').on('click', () => {
     $('html').css('overflow','hidden');

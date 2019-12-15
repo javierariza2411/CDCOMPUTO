@@ -38,7 +38,8 @@
               "./src/javascript/contact-us.js",
               "./src/javascript/subscription.js",
              "./src/bootstrap/vendor/bootstrap/js/bootstrap.bundle.js",
-              "./src/javascript/navbar.js"
+              "./src/javascript/navbar.js",
+              "./src/javascript/login.js"
             ]
           },
           "configurations": {

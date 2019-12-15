@@ -15,27 +15,7 @@ export interface DialogData {
   styleUrls: ['./user-register.component.scss']
 })
 export class UserRegisterComponent implements OnInit{
-  
-
-constructor(public dialog: MatDialog) {}
-
-
-ngOnInit() {
-}
-
-  openDialog() {
-    this.dialog.open(DialogDataExampleDialog, {
-      data: {
-        animal: 'panda'
-      }
-    });
+  ngOnInit() {
+    console.log('UserRegisterComponent');
   }
-}
-
-@Component({
-  selector: 'dialog-data-example-dialog',
-  templateUrl: './dialog-data-example-dialog.html',
-})
-export class DialogDataExampleDialog {
-  constructor(@Inject(MAT_DIALOG_DATA) public data: DialogData) {}
 }
