@@ -1,14 +1,11 @@
-$( () => {
-	//On Scroll Functionality
-	console.log('navbar---');
-	$(window).scroll( () => {
+$(window).on('load', function() {
+	$(document).scroll( () => {
 		console.log('scroll---');
 		var windowTop = $(window).scrollTop();
 		windowTop > 100 ? $('nav').addClass('navShadow') : $('nav').removeClass('navShadow');
 		windowTop > 100 ? $('ul').css('top','100px') : $('ul').css('top','160px');
 	});
 
-	//Click Logo To Scroll To Top
 	$('#logo').on('click', () => {
 		$('html,body').animate({
 			scrollTop: 0
@@ -35,5 +32,4 @@ $( () => {
 			$('.navbar').removeClass('open-menu');
 		});
 	});
-
 });
