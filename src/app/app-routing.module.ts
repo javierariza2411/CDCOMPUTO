@@ -4,6 +4,7 @@ import { CdComputoComponent } from './cd-computo/cd-computo.component';
 import { CarritoComponent} from './carrito/carrito.component'
 import { CatalogoComponent } from './catalogo/catalogo.component';
 import { ContactUsComponent } from './cd-computo/ui-ux/cd-computo.contact-us';
+import { CargaImagenesComponent } from './carga-imagenes/carga-imagenes.component';
 
 
 
@@ -13,8 +14,9 @@ const routes: Routes = [
   {path:'inicio', component: CdComputoComponent},
   {path:'ver-Carrito', component: CarritoComponent},
   {path:'ver-Catalogo', component: CatalogoComponent},
-  {path:'contactanos', component: ContactUsComponent}
-
+  {path:'contactanos', component: ContactUsComponent},
+  {path:'cargaImagenes', component: CargaImagenesComponent}
+ 
 
 
   // {path: 'contact', component:''},

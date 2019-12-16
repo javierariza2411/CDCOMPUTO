@@ -28,6 +28,9 @@ import { CarritoComponent} from './carrito/carrito.component';
 import { CarritoService } from './service/carrito.service';
 import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 import { CatalogoComponent} from './catalogo/catalogo.component';
+import { NgxDropzoneModule } from 'ngx-dropzone';
+import { CargaImagenesComponent } from './carga-imagenes/carga-imagenes.component';
+
 
 
 
@@ -49,7 +52,8 @@ import { CatalogoComponent} from './catalogo/catalogo.component';
     CarritoComponent,
     AutocompleteComponent,
     CatalogoComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    CargaImagenesComponent
 
     
   ],
@@ -66,7 +70,8 @@ import { CatalogoComponent} from './catalogo/catalogo.component';
     FormsModule,
     ReactiveFormsModule,
     MatAutocompleteModule,
-    MatDialogModule
+    MatDialogModule,
+    NgxDropzoneModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [ProductoService,CarritoService],
