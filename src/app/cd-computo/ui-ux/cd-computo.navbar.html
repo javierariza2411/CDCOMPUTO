@@ -26,8 +26,8 @@
           <li class="navbar__list-item">
             <a class="text-color--grey-light"  routerLink="/contactanos">Contactanos</a>
           </li>
-          <li id="login" class="navbar__list-item">
-          <app-user-register> </app-user-register>
+          <li class="navbar__list-item">
+            <span class="text-color--grey-light" id="login">Login</span>
           </li>
           <li class="navbar__list-item navbar__separator text-color--secondary">
             <span>|</span>
@@ -43,5 +43,35 @@
   </nav>
 </header>
 <div class="login__modal">
-  <i class="login--close fas fa-times"></i>
+  <div class="login__container">
+    <div class="login__container--appear">
+      <i class="login--close fas fa-times"></i>
+      <img class="login--bg-right" src="/assets/img/contact-us-bg.png" />
+      <img class="login--bg-left" src="/assets/img/contact-us-bg.png" />
+      <div class="container">
+        <div class="row middle-xs center-xs">
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <h1 class="login__modal--title TechnicalForest-Bold">Login</h1>
+            <div class="form__group">
+              <input type="text" id="usuario" class="form__field" placeholder="Usuario" />
+              <label for="usuario" class="form__label">Usuario</label> 
+            </div>
+            <div class="form__group">
+              <input type="password" id="password" class="form__field" placeholder="Contraseñas" />
+              <label for="password" class="form__label">Contraseñas</label> 
+            </div>
+            <div class="margin-top--40">
+              <a class="link link--primary">Sign in</a>
+            </div>
+            <div class="margin-top--20">
+                <button class="btn btn-solid--primary">Crear cuenta</button>
+              </div>
+            <div class="text-align--center margin-top--100">
+              <img src="/assets/img/logoblack.png" width="50%" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

@@ -4,6 +4,17 @@
     text-decoration: none;
     font-family: $font-family-secondary;
     transition: .4s all;
+    &-solid--primary {
+      color: white;
+      padding: 6px 12px;
+      background: $primary-color;
+      border: none;
+      border-radius: 40px;
+      &:hover {
+        background: $primary-color-light;
+        color: $white;
+      }
+    }
     &-solid--secondary {
       color: white;
       padding: 6px 12px;
@@ -58,6 +69,17 @@
     }
     i {
       margin-left: 20px;
+    }
+  }
+
+  .link {
+    font-weight: bold;
+    &--primary {
+      cursor: pointer;
+      color: $primary-color !important;
+      &:hover, &:active, &:focus {
+        color: $primary-color-light !important;
+      }
     }
   }
   

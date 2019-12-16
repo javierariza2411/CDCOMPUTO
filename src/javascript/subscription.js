@@ -1,12 +1,7 @@
 
 // subscription
-
-
 $( () => {
-
-  
   $('.subscription__modal').css('display', 'none');
-  console.log($('.subscription__modal'));
   $('.subscription').on('click', () => {
     $('html').css('overflow','hidden');
     $('.subscription__modal').css('display', 'flex');

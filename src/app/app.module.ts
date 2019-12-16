@@ -22,7 +22,6 @@ import { ContactUsComponent } from './cd-computo/ui-ux/cd-computo.contact-us';
 import {HttpClientModule} from '@angular/common/http';
 import {ProductoService} from './services/serviceRest';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { UserRegisterComponent } from './user-register/user-register.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { OpentoggleComponent } from './opentoggle/opentoggle.component';
 import { CarritoComponent} from './carrito/carrito.component';
@@ -46,7 +45,6 @@ import { CatalogoComponent} from './catalogo/catalogo.component';
     FooterComponent,
     SubscriptionListComponent,
     SideNavComponent,
-    UserRegisterComponent,
     OpentoggleComponent,
     CarritoComponent,
     AutocompleteComponent,
