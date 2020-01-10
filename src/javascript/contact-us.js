@@ -1,7 +1,5 @@
 // contact us map
 $( () => {
-  AOS.init();
-  AOS.refresh();
   $('.contact-us__map').css('display', 'none');
   $('.map--pointer').on('click', () => {
     $('.contact-us__map').removeClass('animated fadeOutDown');

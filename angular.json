@@ -34,7 +34,6 @@
             "scripts": [
               "./node_modules/hammerjs/hammer.min.js",
               "./node_modules/jquery/dist/jquery.min.js",
-              "./node_modules/aos/dist/aos.js",
               "./src/javascript/contact-us.js",
               "./src/javascript/subscription.js",
               "./src/bootstrap/vendor/bootstrap/js/bootstrap.bundle.js",
