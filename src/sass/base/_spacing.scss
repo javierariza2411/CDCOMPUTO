@@ -27,6 +27,11 @@
   }
   
   .padding {
+    &--top {
+      &-20 {
+        padding-top: 20px;
+      }
+    }
     &--horizontal {
       &-tiny {
         padding: 0 15px;

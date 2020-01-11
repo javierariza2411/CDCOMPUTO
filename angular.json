@@ -34,11 +34,13 @@
             "scripts": [
               "./node_modules/hammerjs/hammer.min.js",
               "./node_modules/jquery/dist/jquery.min.js",
+              "./src/javascript/index.js",
               "./src/javascript/contact-us.js",
               "./src/javascript/subscription.js",
               "./src/bootstrap/vendor/bootstrap/js/bootstrap.bundle.js",
               "./src/javascript/navbar.js",
-              "./src/javascript/login.js"
+              "./src/javascript/login.js",
+              "./src/javascript/sidenavbar.js"
             ]
           },
           "configurations": {
@@ -109,8 +111,10 @@
               "src/styles.css"
             ],
             "scripts": [
+              "src/javascript/index.js",
               "src/javascript/contact-us.js",
-              "src/javascript/navbar.js"
+              "src/javascript/navbar.js",
+              "src/javascript/sidenavbar.js"
             ]
           }
         },
