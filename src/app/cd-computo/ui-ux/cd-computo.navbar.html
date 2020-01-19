@@ -48,7 +48,7 @@
       <img class="login--bg-left" src="/assets/img/contact-us-bg.png" />
       <div class="container">
         <div class="row middle-xs center-xs">
-          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 login__modal--sign-in">
             <h1 class="login__modal--title TechnicalForest-Bold">Login</h1>
             <div class="form__group">
               <input type="text" id="usuario" class="form__field" placeholder="Usuario" />
@@ -62,7 +62,31 @@
               <a class="link link--primary">Sign in</a>
             </div>
             <div class="margin-top--20">
-                <button class="btn btn-solid--primary">Crear cuenta</button>
+                <button id='open-register' class="btn btn-solid--primary">Crear cuenta</button>
+              </div>
+            <div class="text-align--center margin-top--100">
+              <img src="/assets/img/logoblack.png" width="50%" />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 login__modal--registration">
+            <h1 class="login__modal--title TechnicalForest-Bold">Registrate</h1>
+            <div class="form__group">
+              <input type="text" id="usuario" class="form__field" placeholder="Usuario" />
+              <label for="usuario" class="form__label">Usuario</label> 
+            </div>
+            <div class="form__group">
+              <input type="email" id="email" class="form__field" placeholder="Email" />
+              <label for="email" class="form__label">Email</label> 
+            </div>
+            <div class="form__group">
+              <input type="password" id="password" class="form__field" placeholder="Contraseñas" />
+              <label for="password" class="form__label">Contraseñas</label> 
+            </div>
+            <div class="margin-top--40">
+              <a class="link link--primary">Crear Cuenta</a>
+            </div>
+            <div class="margin-top--20">
+                <button id="close--register" class="btn btn-solid--primary">Log in</button>
               </div>
             <div class="text-align--center margin-top--100">
               <img src="/assets/img/logoblack.png" width="50%" />
