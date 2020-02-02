@@ -400,7 +400,10 @@
       <div class="row">
         <div class="col-lg-4 col-md-6 mb-4" *ngFor="let item of listaArticulos; let i = index">
           <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="{{item.arti_ruta}}" alt=""></a>
+            <a href="#">
+              <img class="card-img-top" ngIf="{{item.arti_ruta}}" src="{{item.arti_ruta}}" alt="">
+              <img class="card-img-top" ngIf="!{{item.arti_ruta}}" src="/assets/img/not-found.png" alt="">
+            </a>
             <div class="card-body">
               <h6 class="card-title">
                 <a href="#">{{item.arti_descripcion}}</a>
