@@ -2,7 +2,7 @@ $(window).on('load', function() {
 	$(document).scroll( () => {
 		var windowTop = $(window).scrollTop();
 		windowTop > 25 ? $('nav').addClass('navShadow') : $('nav').removeClass('navShadow');
-		windowTop > 100 ? $('ul').css('top','100px') : $('ul').css('top','160px');
+		windowTop > 100 ? $('ul').css('top','100px') : $('ul').css('top','95px');
 	});
 
 	$('#logo').on('click', () => {
@@ -24,20 +24,10 @@ $(window).on('load', function() {
 		$('#menu-toggle').toggleClass('closeMenu');
 		$('ul').toggleClass('showMenu');
 		$('.navbar').toggleClass('open-menu');
-
 		$('li').on('click', () => {
 			$('ul').removeClass('showMenu');
 			$('#menu-toggle').removeClass('closeMenu');
 			$('.navbar').removeClass('open-menu');
 		});
 	});
-	// console.log('hola------');
-	// $('#openCategories').on('click', () => {
-	// 	console.log('add-----');
-	// 	$('side-nav--categories').addClass('show');
-    // });
-    
-    // $('#closeCategories').on('click', () => {
-	// 	$('side-nav--categories').removeClass('show');
-	// });
 });

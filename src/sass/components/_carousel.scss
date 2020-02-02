@@ -8,3 +8,15 @@
     width: 100%;
   }
 }
+
+.carousel-inner {
+  height: 41vh;
+  
+  @media screen and (min-width: $screen-large) {
+    height: calc(100vh - 104px);
+  }
+}
+
+.carousel-indicators {
+	z-index: 4;
+}

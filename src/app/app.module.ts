@@ -30,13 +30,7 @@ import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 import { CatalogoComponent} from './catalogo/catalogo.component';
 import { NgxDropzoneModule } from 'ngx-dropzone';
 import { CargaImagenesComponent } from './carga-imagenes/carga-imagenes.component';
-
-
-
-
-
-
-
+import { ShoppingCarComponent } from './cd-computo/ui-ux/cd-computo.shopping-car';
 
 
 @NgModule({
@@ -53,9 +47,8 @@ import { CargaImagenesComponent } from './carga-imagenes/carga-imagenes.componen
     AutocompleteComponent,
     CatalogoComponent,
     ContactUsComponent,
-    CargaImagenesComponent
-
-    
+    CargaImagenesComponent,
+    ShoppingCarComponent,
   ],
   imports: [
     BrowserModule,

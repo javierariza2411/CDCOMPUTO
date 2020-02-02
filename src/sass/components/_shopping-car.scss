@@ -1,0 +1,47 @@
+.shopping-car {
+    &__titles {
+        border-bottom: 1px solid $grey-super-ligther;
+        padding-bottom: 10px;
+        h3, p {
+            margin: 0;
+        }
+    }
+    &__card {
+        &-img {
+            max-height: 200px;
+            max-width: 200px;
+            display: inline-block;
+            overflow: hidden;
+            img {
+                width: 100%;
+            }
+        }
+        &-details {
+            display: inline-block;
+        }
+    }
+    &__resumen {
+        color: white;
+        background-image: radial-gradient(300px 418px ellipse at 28% 47%, rgba(0, 56, 87, 0.7) 10%, #001D2C 69%);
+        background-color: $primary-color;
+        padding: 20px;
+        border-radius: 2px;
+        &-item  {
+            border-bottom: 1px solid $grey-super-ligther; 
+            margin: 0 0 15px 0;
+            p {
+                margin: 0;
+            }
+        }
+        &-total {
+            font-weight: bold;
+            margin: 0px
+        }
+        &-container {
+            background: white;
+            color: black;
+            border-radius: 2px;
+            padding: 20px;
+        }
+    }
+}

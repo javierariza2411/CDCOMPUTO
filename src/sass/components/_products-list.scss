@@ -1,8 +1,9 @@
 .products-list {
   &--title {
     text-transform: uppercase;
-    color: #c7c7c7;
+    color: $grey-super-ligther;
     font-weight: 500;
+    font-size: 12px;
   }
   @media screen and (min-width: $screen-medium) {
     padding-left: 50px;

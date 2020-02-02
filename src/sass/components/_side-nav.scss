@@ -3,6 +3,22 @@
     background-color: transparent;
     border: none;
   }
+  &--overlay {
+    position: fixed;
+    background: #000000a3;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 900px;
+    z-index: 99;
+    transition: all .2s;
+  }
+  &--overlay.show {
+    right: 0;
+  }
+  &--overlay.mobile {
+    display: none;
+  }
   &--title {
     font-size: 12px;
     text-transform: uppercase;
@@ -92,6 +108,9 @@
     &--title.mobile {
       display: flex;
       color: $grey-super-ligther;
+    }
+    &--overlay.mobile {
+      display: initial;
     }
     &--categories {
       position: fixed;
