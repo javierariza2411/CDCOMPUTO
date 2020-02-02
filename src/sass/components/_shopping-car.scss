@@ -18,6 +18,15 @@
         }
         &-details {
             display: inline-block;
+            padding: 30px 0;
+            h4 {
+                font-weight: bold;
+            }
+            a {
+                color: $grey-super-ligther;
+                cursor: pointer;
+                text-decoration: underline !important;
+            }
         }
     }
     &__resumen {
