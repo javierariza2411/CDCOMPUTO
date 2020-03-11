@@ -29,9 +29,9 @@ import { CarritoService } from './service/carrito.service';
 import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 import { CatalogoComponent} from './catalogo/catalogo.component';
 import { NgxDropzoneModule } from 'ngx-dropzone';
-import { CargaImagenesComponent } from './carga-imagenes/carga-imagenes.component';
 import { ShoppingCarComponent } from './cd-computo/ui-ux/cd-computo.shopping-car';
-
+import {UploadFileComponent} from './upload-file/upload-file.component';
+import {ImageUploadModule} from 'angular2-image-upload';
 
 @NgModule({
   declarations: [
@@ -47,7 +47,7 @@ import { ShoppingCarComponent } from './cd-computo/ui-ux/cd-computo.shopping-car
     AutocompleteComponent,
     CatalogoComponent,
     ContactUsComponent,
-    CargaImagenesComponent,
+    UploadFileComponent,
     ShoppingCarComponent,
   ],
   imports: [
@@ -64,7 +64,8 @@ import { ShoppingCarComponent } from './cd-computo/ui-ux/cd-computo.shopping-car
     ReactiveFormsModule,
     MatAutocompleteModule,
     MatDialogModule,
-    NgxDropzoneModule
+    NgxDropzoneModule,
+    ImageUploadModule.forRoot()
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [ProductoService,CarritoService],
