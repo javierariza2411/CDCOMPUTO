@@ -79,14 +79,14 @@ export class CdComputoComponent implements OnInit {
 
   ngOnInit() {
 
-    // this.getCatalogo();
+    //  this.getCatalogo();
 
-    this.carritoServices.getCarrito().subscribe(data => {
-      this.total = this.carritoServices.getTotal();
+    // this.carritoServices.getCarrito().subscribe(data => {
+    //   this.total = this.carritoServices.getTotal();
 
-      console.log("el total es"+this.total)
-    },
-      error => alert(error));
+    //   console.log("el total es"+this.total)
+    // },
+    //   error => alert(error));
 
     var articuloImagen = new Object(),
       arti_precioventa4 = "",
@@ -104,6 +104,7 @@ export class CdComputoComponent implements OnInit {
 
     this.productoService.getProductos().subscribe((data: any[]) => {
       this.listaArticulosTemp = data;
+      console.log(data);
       this.listaArticulos = new Array();
       for (let articulo of this.listaArticulosTemp) {
         for (let imagen of this.listadoDeImagenesArticulo) {

@@ -377,10 +377,10 @@
     <div class="col-lg-9 col-md-8 products-list">
       <p class="products-list--title margin-bottom--30">Computadores</p>
       <div class="row">
-        <div class="col-lg-4 col-md-6 mb-4" *ngFor="let item of listaArticulos; let i = index">
+        <div class="col-lg-4 col-md-6 mb-4"  *ngFor="let item of listaArticulos; let i = index">
           <div class="card h-100">
             <a href="#">
-              <img class="card-img-top" ngIf="{{item.arti_ruta}}" src="{{item.arti_ruta}}" alt="">
+              <img class="card-img-top"  alt="">
             </a>
             <div class="card-body">
               <h6 class="card-title">
@@ -405,7 +405,7 @@
 
 
 
-      <article class="message" *ngFor="let producto of productos">
+      <!-- <article class="message" *ngFor="let producto of productos">
         <div class="message-header">
           <p class="subtitle white">{{producto.titulo}}</p>
         </div>
@@ -416,7 +416,7 @@
             <button (click)="addProducto(producto)" class="button is-info">Añadir al carrito</button>
           </div>
         </div>
-      </article>
+      </article> -->
       
 
     </div>
