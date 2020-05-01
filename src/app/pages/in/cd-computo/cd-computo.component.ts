@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductoService } from '../services/serviceRest';
 import { Subscription } from 'rxjs/Subscription';
-import { CarritoService } from '../service/carrito.service';
-import { Producto } from './../model/producto';
-import { ProductosService } from '../service/productos.service';
+import { ProductosService } from 'src/app/service/productos.service';
+import { CarritoService } from 'src/app/service/carrito.service';
+import { ProductoService } from 'src/app/services/serviceRest';
+import { Producto } from 'src/app/model/producto';
 
 
 @Component({
@@ -37,9 +37,12 @@ export class CdComputoComponent implements OnInit {
   public total: number;
 
 
-  constructor(private productoService: ProductoService, private productosService: ProductosService, private carritoServices: CarritoService) {
-
-    console.log("ENTRO A CONSTRUCTOR")
+  constructor(
+    private productoService: ProductoService,
+    private productosService: ProductosService,
+    private carritoServices: CarritoService
+  ) {
+    console.log('ENTRO A CONSTRUCTOR')
     for (let i = 0; i < 20; i++) { // Creamos un conjunto de 20 productos de prueba
       const producto = new Producto();
       producto.codigo = (i + 1);
@@ -49,7 +52,6 @@ export class CdComputoComponent implements OnInit {
       producto.fabricante = `Fabricante Tkeno-${i}`;
       producto.novedad = (i < 6); // Marcamos como novedad los 6 primeros
       this.productos.push(producto);
-
     }
 
 
@@ -64,7 +66,7 @@ export class CdComputoComponent implements OnInit {
   getCatalogo() {
 
 
-    console.log("CATALOGO");
+    console.log('CATALOGO');
 
     this.productosService.getProductos()
       .then(data => {
@@ -89,18 +91,18 @@ export class CdComputoComponent implements OnInit {
     //   error => alert(error));
 
     var articuloImagen = new Object(),
-      arti_precioventa4 = "",
-      arti_descripcion = "",
+      arti_precioventa4 = '',
+      arti_descripcion = '',
       arti_precioventa3 = 0,
-      arti_codigo = "",
+      arti_codigo = '',
       arti_precioventa2 = 0,
       arti_precioventa1 = 0,
       arti_cantidad = 0,
-      arti_bodega = "",
-      arti_ruta = "";
+      arti_bodega = '',
+      arti_ruta = '';
 
 
-    var rutaString = "";
+    var rutaString = '';
 
     this.productoService.getProductos().subscribe((data: any[]) => {
       this.listaArticulosTemp = data;
@@ -114,15 +116,15 @@ export class CdComputoComponent implements OnInit {
         }
         if (articulo.arti_cantidad > 0) {
           articuloImagen = new Object();
-          articuloImagen["arti_precioventa4"] = articulo.arti_precioventa4;
-          articuloImagen["arti_descripcion"] = articulo.arti_descripcion;
-          articuloImagen["arti_precioventa3"] = articulo.arti_precioventa3;
-          articuloImagen["arti_codigo"] = articulo.arti_codigo;
-          articuloImagen["arti_precioventa2"] = articulo.arti_precioventa2;
-          articuloImagen["arti_precioventa1"] = articulo.arti_precioventa1;
-          articuloImagen["arti_cantidad"] = articulo.arti_cantidad;
-          articuloImagen["arti_bodega"] = articulo.arti_bodega;
-          articuloImagen["arti_ruta"] = rutaString;
+          articuloImagen['arti_precioventa4'] = articulo.arti_precioventa4;
+          articuloImagen['arti_descripcion'] = articulo.arti_descripcion;
+          articuloImagen['arti_precioventa3'] = articulo.arti_precioventa3;
+          articuloImagen['arti_codigo'] = articulo.arti_codigo;
+          articuloImagen['arti_precioventa2'] = articulo.arti_precioventa2;
+          articuloImagen['arti_precioventa1'] = articulo.arti_precioventa1;
+          articuloImagen['arti_cantidad'] = articulo.arti_cantidad;
+          articuloImagen['arti_bodega'] = articulo.arti_bodega;
+          articuloImagen['arti_ruta'] = rutaString;
           this.listaArticulos.push(articuloImagen);
         }
       }

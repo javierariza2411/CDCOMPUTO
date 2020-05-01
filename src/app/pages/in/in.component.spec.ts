@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OpentoggleComponent } from './opentoggle.component';
+import { InComponent } from './in.component';
 
-describe('OpentoggleComponent', () => {
-  let component: OpentoggleComponent;
-  let fixture: ComponentFixture<OpentoggleComponent>;
+describe('InComponent', () => {
+  let component: InComponent;
+  let fixture: ComponentFixture<InComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ OpentoggleComponent ]
+      declarations: [ InComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(OpentoggleComponent);
+    fixture = TestBed.createComponent(InComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
