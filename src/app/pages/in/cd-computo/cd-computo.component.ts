@@ -65,7 +65,20 @@ export class CdComputoComponent implements OnInit {
   }
 
   addProducto(producto) {
-    this.articles.push(producto);
+    if (this.articles && this.articles.length > 0) {
+      if (this.articles.find(articulo => articulo.arti_codigo === producto.arti_codigo)) {
+        this.articles[this.articles.findIndex(articulo => articulo.arti_codigo === producto.arti_codigo)].cantidad += 1;
+        this.articles[this.articles.findIndex(articulo => articulo.arti_codigo === producto.arti_codigo)].total += producto.arti_precioventa1;
+      } else {
+        producto.cantidad = 1;
+        producto.total = producto.arti_precioventa1;
+        this.articles.push(producto);
+      }
+    } else {
+      producto.cantidad = 1;
+      producto.total = producto.arti_precioventa1;
+      this.articles.push(producto);
+    }
     localStorage.setItem('product-car', JSON.stringify(this.articles));
   }
 
@@ -105,7 +118,8 @@ export class CdComputoComponent implements OnInit {
       arti_precioventa1 = 0,
       arti_cantidad = 0,
       arti_bodega = '',
-      arti_ruta = '';
+      arti_ruta = '',
+      cantidad = 0;
 
 
     var rutaString = '';
@@ -132,6 +146,7 @@ export class CdComputoComponent implements OnInit {
           articuloImagen['arti_cantidad'] = articulo.arti_cantidad;
           articuloImagen['arti_bodega'] = articulo.arti_bodega;
           articuloImagen['arti_ruta'] = rutaString;
+          articuloImagen['cantidad'] = '';
           this.listaArticulos.push(articuloImagen);
         }
       }
