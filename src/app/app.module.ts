@@ -20,12 +20,10 @@ import { CarritoService } from './service/carrito.service';
 import { NgxDropzoneModule } from 'ngx-dropzone';
 import { UploadFileComponent } from './upload-file/upload-file.component';
 import { ImageUploadModule } from 'angular2-image-upload';
-import { NavbarComponent } from './componentes/navbar/cd-computo.navbar';
 import { FooterComponent } from './componentes/footer/cd-computo.footer';
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
     FooterComponent,
     UploadFileComponent
   ],

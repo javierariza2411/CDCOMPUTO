@@ -1,2 +1,103 @@
-<router-outlet></router-outlet>
+<header>
+    <nav class="navbar">
+        <div class="navbar__container container">
+            <div class="navbar__brand">
+                <a routerLink="/inicio"><img id="logo" src="/assets/img/logoblack.png" /></a>
+            </div>
+            <div id="search-bar" style="padding: .5em;" class="search">
+                <form class="form-inline my-2 my-lg-0">
+                    <i class="fa fa-search search-bar--input" aria-hidden="true"></i>
+                    <input class="form-control mr-sm-2" type="search" placeholder="¿Qué buscas?" aria-label="Search">
 
+                </form>
+            </div>
+
+            <div class="navbar__menu">
+                <div class="navbar__menu-toggle" id='menu-toggle'>
+                    <div class="navbar__menu-icon">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                </div>
+                <ul class="navbar__list flex--1 TechnicalForest-Regular">
+                    <li class="navbar__list-item">
+                        <a class="text-color--grey-light" routerLink="/in/inicio">Inicio</a>
+                    </li>
+                    <li class="navbar__list-item">
+                        <a class="text-color--grey-light" routerLink="/in/contactanos">Contactanos</a>
+                    </li>
+                    <li class="navbar__list-item">
+                        <span class="text-color--grey-light" id="login">Login</span>
+                    </li>
+                    <li class="navbar__list-item navbar__separator text-color--secondary">
+                        <span>|</span>
+                    </li>
+                    <li class="navbar__list-item" style="color: #00A1AD; cursor: pointer; font-size: 20px;">
+                        <a routerLink="/in/shoppingCar" style="color: #00A1AD; cursor: pointer; font-size: 20px;">
+                            <i class="fa fa-shopping-cart" aria-hidden="true">{{this.articles.length}}</i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="login__modal">
+    <div class="login__container">
+        <div class="login__container--appear">
+            <i class="login--close fas fa-times"></i>
+            <img class="login--bg-right" src="/assets/img/contact-us-bg.png" />
+            <img class="login--bg-left" src="/assets/img/contact-us-bg.png" />
+            <div class="container">
+                <div class="row middle-xs center-xs">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 login__modal--sign-in">
+                        <h1 class="login__modal--title TechnicalForest-Bold">Login</h1>
+                        <div class="form__group">
+                            <input type="text" id="usuario" class="form__field" placeholder="Usuario" />
+                            <label for="usuario" class="form__label">Usuario</label>
+                        </div>
+                        <div class="form__group">
+                            <input type="password" id="password" class="form__field" placeholder="Contraseñas" />
+                            <label for="password" class="form__label">Contraseñas</label>
+                        </div>
+                        <div class="margin-top--40">
+                            <a class="link link--primary">Sign in</a>
+                        </div>
+                        <div class="margin-top--20">
+                            <button id='open-register' class="btn btn-solid--primary">Crear cuenta</button>
+                        </div>
+                        <div class="text-align--center margin-top--100">
+                            <img src="/assets/img/logoblack.png" width="50%" />
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 login__modal--registration">
+                        <h1 class="login__modal--title TechnicalForest-Bold">Registrate</h1>
+                        <div class="form__group">
+                            <input type="text" id="usuario" class="form__field" placeholder="Usuario" />
+                            <label for="usuario" class="form__label">Usuario</label>
+                        </div>
+                        <div class="form__group">
+                            <input type="email" id="email" class="form__field" placeholder="Email" />
+                            <label for="email" class="form__label">Email</label>
+                        </div>
+                        <div class="form__group">
+                            <input type="password" id="password" class="form__field" placeholder="Contraseñas" />
+                            <label for="password" class="form__label">Contraseñas</label>
+                        </div>
+                        <div class="margin-top--40">
+                            <a id="close--register" class="link link--primary">Login</a>
+                        </div>
+                        <div class="margin-top--20">
+                            <button class="btn btn-solid--primary">Crear Cuenta</button>
+                        </div>
+                        <div class="text-align--center margin-top--100">
+                            <img src="/assets/img/logoblack.png" width="50%" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

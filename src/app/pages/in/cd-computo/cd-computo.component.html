@@ -389,7 +389,7 @@
                 <a href="#">{{item.arti_descripcion}}</a>
               </h6>
               <p>{{item.arti_precioventa1 | currency: '$'}}</p>
-              <button mat-button color="primary" (click)="addProducto(producto)"> Añadir al carrito </button>
+              <button mat-button color="primary" (click)="addProducto(item)"> Añadir al carrito </button>
 
 
               <!-- <small class="text-muted ranking">
@@ -436,7 +436,7 @@
 
 
 <!-- spinner -->
-<section class="page-spinner">
+<section class="page-spinner" *ngIf="loading">
   <div class="page-spinner__container">
     <img src="/assets/img/CDComputo-logo.png" width="70px" />
   </div>

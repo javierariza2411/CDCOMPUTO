@@ -35,6 +35,8 @@ export class CdComputoComponent implements OnInit {
   private subscription: Subscription;
   public productos: Array<any> = [];
   public total: number;
+  loading: boolean;
+  public articles: Array<any>;
 
 
   constructor(
@@ -42,7 +44,8 @@ export class CdComputoComponent implements OnInit {
     private productosService: ProductosService,
     private carritoServices: CarritoService
   ) {
-    console.log('ENTRO A CONSTRUCTOR')
+    this.loading = false;
+    console.log('ENTRO A CONSTRUCTOR');
     for (let i = 0; i < 20; i++) { // Creamos un conjunto de 20 productos de prueba
       const producto = new Producto();
       producto.codigo = (i + 1);
@@ -54,13 +57,16 @@ export class CdComputoComponent implements OnInit {
       this.productos.push(producto);
     }
 
-
+    if (localStorage.getItem('product-car')) {
+      this.articles = JSON.parse(localStorage.getItem('product-car'));
+    } else {
+      this.articles = [];
+    }
   }
 
   addProducto(producto) {
-
-    console.log(producto);
-    this.carritoServices.addCarrito(producto);
+    this.articles.push(producto);
+    localStorage.setItem('product-car', JSON.stringify(this.articles));
   }
 
   getCatalogo() {
@@ -105,6 +111,7 @@ export class CdComputoComponent implements OnInit {
     var rutaString = '';
 
     this.productoService.getProductos().subscribe((data: any[]) => {
+      this.loading = true;
       this.listaArticulosTemp = data;
       console.log(data);
       this.listaArticulos = new Array();
@@ -128,7 +135,7 @@ export class CdComputoComponent implements OnInit {
           this.listaArticulos.push(articuloImagen);
         }
       }
-
+      this.loading = false;
 
 
 
