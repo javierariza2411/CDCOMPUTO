@@ -23,7 +23,7 @@
               </div>
               <button (click)="agregarArticulo(article)">+</button>
             </div>
-            <a>Eliminar</a>
+            <a (click)="eliminarArticulo(article)">Eliminar</a>
           </div>
           <div class="col-lg-3">
             {{article.arti_precioventa1 | currency: '$'}}

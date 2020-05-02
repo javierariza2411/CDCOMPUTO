@@ -28,6 +28,11 @@ export class ShoppingCarComponent implements OnInit, DoCheck {
     }
   }
 
+  eliminarArticulo(producto) {
+    this.articles.splice(this.articles.findIndex(articulo => articulo.arti_codigo === producto.arti_codigo), 1);
+    localStorage.setItem('product-car', JSON.stringify(this.articles));
+  }
+
   quitarArticulo(producto) {
     this.carritoServices.minusArticle(producto, this.articles);
   }
