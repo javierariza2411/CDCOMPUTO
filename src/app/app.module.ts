@@ -21,10 +21,12 @@ import { NgxDropzoneModule } from 'ngx-dropzone';
 import { UploadFileComponent } from './upload-file/upload-file.component';
 import { ImageUploadModule } from 'angular2-image-upload';
 import { FooterComponent } from './componentes/footer/cd-computo.footer';
+import { NavbarComponent} from './componentes/navbar/cd-computo.navbar';
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
+    NavbarComponent,
     UploadFileComponent
   ],
   imports: [
