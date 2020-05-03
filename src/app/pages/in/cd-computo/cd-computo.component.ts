@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductoService } from '../services/serviceRest';
 import { Subscription } from 'rxjs/Subscription';
-import { CarritoService } from '../service/carrito.service';
-import { Producto } from './../model/producto';
-import { ProductosService } from '../service/productos.service';
+import { ProductosService } from 'src/app/service/productos.service';
+import { CarritoService } from 'src/app/service/carrito.service';
+import { ProductoService } from 'src/app/services/serviceRest';
+import { Producto } from 'src/app/model/producto';
 
 
 @Component({
@@ -35,11 +35,17 @@ export class CdComputoComponent implements OnInit {
   private subscription: Subscription;
   public productos: Array<any> = [];
   public total: number;
+  loading: boolean;
+  public articles: Array<any>;
 
 
-  constructor(private productoService: ProductoService, private productosService: ProductosService, private carritoServices: CarritoService) {
-
-    console.log("ENTRO A CONSTRUCTOR")
+  constructor(
+    private productoService: ProductoService,
+    private productosService: ProductosService,
+    private carritoServices: CarritoService
+  ) {
+    this.loading = false;
+    console.log('ENTRO A CONSTRUCTOR');
     for (let i = 0; i < 20; i++) { // Creamos un conjunto de 20 productos de prueba
       const producto = new Producto();
       producto.codigo = (i + 1);
@@ -49,22 +55,37 @@ export class CdComputoComponent implements OnInit {
       producto.fabricante = `Fabricante Tkeno-${i}`;
       producto.novedad = (i < 6); // Marcamos como novedad los 6 primeros
       this.productos.push(producto);
-
     }
 
-
+    if (localStorage.getItem('product-car')) {
+      this.articles = JSON.parse(localStorage.getItem('product-car'));
+    } else {
+      this.articles = [];
+    }
   }
 
   addProducto(producto) {
-
-    console.log(producto);
-    this.carritoServices.addCarrito(producto);
+    if (this.articles && this.articles.length > 0) {
+      if (this.articles.find(articulo => articulo.arti_codigo === producto.arti_codigo)) {
+        this.articles[this.articles.findIndex(articulo => articulo.arti_codigo === producto.arti_codigo)].cantidad += 1;
+        this.articles[this.articles.findIndex(articulo => articulo.arti_codigo === producto.arti_codigo)].total += producto.arti_precioventa1;
+      } else {
+        producto.cantidad = 1;
+        producto.total = producto.arti_precioventa1;
+        this.articles.push(producto);
+      }
+    } else {
+      producto.cantidad = 1;
+      producto.total = producto.arti_precioventa1;
+      this.articles.push(producto);
+    }
+    localStorage.setItem('product-car', JSON.stringify(this.articles));
   }
 
   getCatalogo() {
 
 
-    console.log("CATALOGO");
+    console.log('CATALOGO');
 
     this.productosService.getProductos()
       .then(data => {
@@ -89,20 +110,22 @@ export class CdComputoComponent implements OnInit {
     //   error => alert(error));
 
     var articuloImagen = new Object(),
-      arti_precioventa4 = "",
-      arti_descripcion = "",
+      arti_precioventa4 = '',
+      arti_descripcion = '',
       arti_precioventa3 = 0,
-      arti_codigo = "",
+      arti_codigo = '',
       arti_precioventa2 = 0,
       arti_precioventa1 = 0,
       arti_cantidad = 0,
-      arti_bodega = "",
-      arti_ruta = "";
+      arti_bodega = '',
+      arti_ruta = '',
+      cantidad = 0;
 
 
-    var rutaString = "";
+    var rutaString = '';
 
     this.productoService.getProductos().subscribe((data: any[]) => {
+      this.loading = true;
       this.listaArticulosTemp = data;
       console.log(data);
       this.listaArticulos = new Array();
@@ -114,19 +137,20 @@ export class CdComputoComponent implements OnInit {
         }
         if (articulo.arti_cantidad > 0) {
           articuloImagen = new Object();
-          articuloImagen["arti_precioventa4"] = articulo.arti_precioventa4;
-          articuloImagen["arti_descripcion"] = articulo.arti_descripcion;
-          articuloImagen["arti_precioventa3"] = articulo.arti_precioventa3;
-          articuloImagen["arti_codigo"] = articulo.arti_codigo;
-          articuloImagen["arti_precioventa2"] = articulo.arti_precioventa2;
-          articuloImagen["arti_precioventa1"] = articulo.arti_precioventa1;
-          articuloImagen["arti_cantidad"] = articulo.arti_cantidad;
-          articuloImagen["arti_bodega"] = articulo.arti_bodega;
-          articuloImagen["arti_ruta"] = rutaString;
+          articuloImagen['arti_precioventa4'] = articulo.arti_precioventa4;
+          articuloImagen['arti_descripcion'] = articulo.arti_descripcion;
+          articuloImagen['arti_precioventa3'] = articulo.arti_precioventa3;
+          articuloImagen['arti_codigo'] = articulo.arti_codigo;
+          articuloImagen['arti_precioventa2'] = articulo.arti_precioventa2;
+          articuloImagen['arti_precioventa1'] = articulo.arti_precioventa1;
+          articuloImagen['arti_cantidad'] = articulo.arti_cantidad;
+          articuloImagen['arti_bodega'] = articulo.arti_bodega;
+          articuloImagen['arti_ruta'] = rutaString;
+          articuloImagen['cantidad'] = '';
           this.listaArticulos.push(articuloImagen);
         }
       }
-
+      this.loading = false;
 
 
 
