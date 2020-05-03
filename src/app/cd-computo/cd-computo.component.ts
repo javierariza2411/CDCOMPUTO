@@ -10,7 +10,7 @@ import { ProductosService } from '../service/productos.service';
   selector: 'app-cd-computo',
   templateUrl: './cd-computo.component.html',
   styleUrls: ['./cd-computo.component.css'],
-  providers: [ProductosService,CarritoService]
+  providers: [ProductosService, CarritoService]
 })
 export class CdComputoComponent implements OnInit {
 
@@ -34,10 +34,10 @@ export class CdComputoComponent implements OnInit {
   public producto: any;
   private subscription: Subscription;
   public productos: Array<any> = [];
-    public total: number;
+  public total: number;
 
 
-  constructor(private productoService: ProductoService,private productosService: ProductosService, private carritoServices:CarritoService) { 
+  constructor(private productoService: ProductoService, private productosService: ProductosService, private carritoServices: CarritoService) {
 
     console.log("ENTRO A CONSTRUCTOR")
     for (let i = 0; i < 20; i++) { // Creamos un conjunto de 20 productos de prueba
@@ -49,8 +49,8 @@ export class CdComputoComponent implements OnInit {
       producto.fabricante = `Fabricante Tkeno-${i}`;
       producto.novedad = (i < 6); // Marcamos como novedad los 6 primeros
       this.productos.push(producto);
-    
-  }
+
+    }
 
 
   }
@@ -61,7 +61,7 @@ export class CdComputoComponent implements OnInit {
     this.carritoServices.addCarrito(producto);
   }
 
-  getCatalogo(){
+  getCatalogo() {
 
 
     console.log("CATALOGO");
@@ -73,7 +73,7 @@ export class CdComputoComponent implements OnInit {
       .catch(error => alert(error));
 
 
-      console.log(this.productos);
+    console.log(this.productos);
   }
 
 
@@ -128,18 +128,18 @@ export class CdComputoComponent implements OnInit {
       }
 
 
-     
+
 
     });
 
 
 
-   
-  
+
+
     // /**
     //  * addProducto
     //  */
-   
+
 
 
   }
